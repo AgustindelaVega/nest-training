@@ -18,7 +18,7 @@ export class EmailController {
   constructor(private readonly emailService: EmailService) {}
 
   @Post()
-  registerUser(@Request() req, @Body() email: Email) {
+  sendEmail(@Request() req, @Body() email: Email) {
     return this.emailService.sendEmail(req.user, email);
   }
 
