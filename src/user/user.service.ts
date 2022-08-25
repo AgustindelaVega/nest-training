@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
-import { Role, User, Prisma } from '@prisma/client';
+import { User, Prisma } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
 import * as dayjs from 'dayjs';
 
@@ -61,7 +61,7 @@ export class UserService {
       where: { userId: user.id },
     });
     if (!usage) throw new BadRequestException('User not found');
-    if (usage.dailyUsage > +process.env.MAX_EMAIL_USAGE)
+    if (usage.dailyUsage >= +process.env.MAX_EMAIL_USAGE)
       throw new BadRequestException('Max daily usage reached');
 
     const shouldResetUsage =
