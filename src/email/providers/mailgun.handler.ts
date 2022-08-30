@@ -1,5 +1,5 @@
 import { AbstractEmailHandler } from './email.handler';
-import { Email } from '../email';
+import { Email } from '../entities/email';
 import { NodeMailgun } from 'ts-mailgun';
 
 export class MailgunHandler extends AbstractEmailHandler {

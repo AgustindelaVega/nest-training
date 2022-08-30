@@ -1,4 +1,4 @@
-import { Email } from '../email';
+import { Email } from '../entities/email';
 
 interface EmailHandler {
   setNext(handler: EmailHandler): EmailHandler;

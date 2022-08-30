@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 import { EmailService } from './email.service';
 import { JwtAuthGuard } from '../auth/jwt/jwt-auth.guard';
-import { Email } from './email';
+import { Email } from './entities/email';
 import { RolesGuard } from '../auth/role/auth.guard';
 import { Roles } from '../auth/role/role.decorator';
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Email } from './email';
+import { Email } from './entities/email';
 import { AbstractEmailHandler } from './providers/email.handler';
 import { SendgridHandler } from './providers/sendgrid.handler';
 import { MailgunHandler } from './providers/mailgun.handler';

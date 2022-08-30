@@ -1,5 +1,5 @@
 import { AbstractEmailHandler } from './email.handler';
-import { Email } from '../email';
+import { Email } from '../entities/email';
 import * as sgMail from '@sendgrid/mail';
 
 export class SendgridHandler extends AbstractEmailHandler {
